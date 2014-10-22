@@ -6,6 +6,7 @@ RUN gem install github-pages
 RUN gem install therubyracer
 
 EXPOSE 4000
+VOLUME /gh-pages
 
 WORKDIR /gh-pages
-CMD ["jekyll", "serve", "--watch"]
+CMD ["jekyll", "serve", "--force_polling"]
